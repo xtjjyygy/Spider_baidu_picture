@@ -30,7 +30,7 @@ def getPic(html,keyword):
             continue
         string = golbal_path + keyword+'_'+ str(datetime.datetime.now()) + '.jpg'
 	#print (string)
-        fp = open(string.decode('utf-8').encode('cp936'),'wb')
+        fp = open(string,'wb')
         fp.write(pic.content)
         fp.close()
         i += 1
