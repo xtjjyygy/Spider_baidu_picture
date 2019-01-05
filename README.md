@@ -1,5 +1,5 @@
 # Spider_baidu_picture
-Use python to crawl Baidu images
+Use python to crawl Baidu images,The script is written in python2.
 
 一，怎么使用此脚本(How to use this script)
 
