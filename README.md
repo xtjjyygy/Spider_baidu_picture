@@ -36,8 +36,14 @@ Use python to crawl Baidu images
  
  （2）urls:通过观察百度图片（）中的url不同页码之间的区别:
  第一页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=0
+ 
  第二页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=20
+ 
  第三页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=40
+ 
  总结：即pn=0时对应第1页，pn=20时对应第二页，以此类推，故：
-通过此 urls = ["http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word="+input_word+"&pn={}".format(str(i)) for i in range(0,81,20)]来获取其前5页的所有图片。
+
+ 通过此 urls = ["http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word="+input_word+"&pn={}".format(str(i)) for i in range(0,81,20)]来获取其前5页的所有图片。
+ 
+ （3）for循环：以此遍历每页的url，并且调用getpic函数下载图片。
 
