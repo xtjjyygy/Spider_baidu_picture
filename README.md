@@ -7,6 +7,10 @@ Use python to crawl Baidu images
   
   After downloading this script, in the Linux environment, use "python Spider_baidu_picture.py or ./Spider_baidu_picture.py" directly, then enter the keyword of the image you need to crawl (both in English and Chinese), and execute the result. A folder will be automatically generated under the current directory based on the keyword you entered, and the captured image will be saved in this folder;
   
+  如果出现Spider_baidu_picture.py无法执行的情况，请赋予Spider_baidu_picture.py可执行的权限（chmod 777 Spider_baidu_picture.py）
+  
+  If Spider_baidu_picture.py cannot be executed, give Spider_baidu_picture.py executable permissions（chmod 777 Spider_baidu_picture.py）.
+  
   如下图所示(As shown below)：
   
   ![image](https://github.com/xtjjyygy/Spider_baidu_picture/raw/master/screenshot/Selection_003.png)
