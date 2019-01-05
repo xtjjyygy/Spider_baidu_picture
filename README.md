@@ -1,26 +1,28 @@
 # Spider_baidu_picture
 Use python to crawl Baidu images
 
-一，怎么使用此脚本
+一，怎么使用此脚本(How to use this script)
 
   下载此脚本之后，在linux环境下，直接使用“python Spider_baidu_picture.py或者./Spider_baidu_picture.py”即可，然后输入您所需要爬取的图片的关键字（中英文都可以），执行之后的结果将会根据您所输入的关键字在当前目录下面自动生成一个文件夹，并将所爬取的图片存入此文件夹中；
   
-  如下图所示：
+  After downloading this script, in the Linux environment, use "python Spider_baidu_picture.py or ./Spider_baidu_picture.py" directly, then enter the keyword of the image you need to crawl (both in English and Chinese), and execute the result. A folder will be automatically generated under the current directory based on the keyword you entered, and the captured image will be saved in this folder;
+  
+  如下图所示(As shown below)：
   
   ![image](https://github.com/xtjjyygy/Spider_baidu_picture/raw/master/screenshot/Selection_003.png)
   
 
-二，代码简介
+二，代码简介(Code introduction)
 
-1,导入相关库：
+1,导入相关库(Import related libraries)：
 
-————re：正则；
+————re：正则(Regular)；
 
-————requests：是python实现的简易的HTTP库
+————requests：是python实现的简易的HTTP库(Is a simple HTTP library implemented by Python)
 
-————os:用于处理文件和目录的库
+————os:用于处理文件和目录的库(Library for working with files and directories)
 
-————datetime：时间模块
+————datetime：时间模块(Time module)
 
 2,curl_path：即用os库来获取当前文件的位置
 
