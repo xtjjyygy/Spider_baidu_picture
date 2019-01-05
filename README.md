@@ -13,6 +13,7 @@ Use python to crawl Baidu images
 二，代码简介
 
 1,导入相关库：
+
 ————re：正则；
 
 ————requests：是python实现的简易的HTTP库
