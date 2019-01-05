@@ -14,8 +14,11 @@ Use python to crawl Baidu images
 
 1,导入相关库：
 ————re：正则；
+
 ————requests：是python实现的简易的HTTP库
+
 ————os:用于处理文件和目录的库
+
 ————datetime：时间模块
 
 2,curl_path：即用os库来获取当前文件的位置
