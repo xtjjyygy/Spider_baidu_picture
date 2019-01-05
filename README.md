@@ -38,6 +38,7 @@ Use python to crawl Baidu images
  （1）input_word：获取输入的关键字； 
  
  （2）urls:通过观察百度图片（）中的url不同页码之间的区别:
+ 
  第一页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=0
  
  第二页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=20
