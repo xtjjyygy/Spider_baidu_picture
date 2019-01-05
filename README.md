@@ -28,4 +28,16 @@ Use python to crawl Baidu images
 
 (3)for循环中的内容：
 
- 循环遍历picture_url中的所有图片的url，然后通过requests.get来获取图片，并且通过try...except来处理两个常见的异常，然后将所有爬取的图片存入到以keyword命名的文件夹中，并且用当前时间（datetime.datetime.now())来命名所获得的图片，一次来防止图片重名的问题； 
+ 循环遍历picture_url中的所有图片的url，然后通过requests.get来获取图片，并且通过try...except来处理两个常见的异常，然后将所有爬取的图片存入到以keyword命名的文件夹中，并且用当前时间（datetime.datetime.now())来命名所获得的图片，以此来防止图片重名的问题； 
+ 
+ 4，if __name__ == '__main__':
+ 
+ （1）input_word：获取输入的关键字； 
+ 
+ （2）urls:通过观察百度图片（）中的url不同页码之间的区别:
+ 第一页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=0
+ 第二页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=20
+ 第三页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=40
+ 总结：即pn=0时对应第1页，pn=20时对应第二页，以此类推，故：
+通过此 urls = ["http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word="+input_word+"&pn={}".format(str(i)) for i in range(0,81,20)]来获取其前5页的所有图片。
+
