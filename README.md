@@ -28,23 +28,25 @@ Use python to crawl Baidu images
 
 ————datetime：时间模块(Time module)
 
-2,curl_path：即用os库来获取当前文件的位置
+2,curl_path：即用os库来获取当前文件的位置(Use the os library to get the location of the current file.)
 
-3,getpic函数：
+3,getpic函数：(getpic function)
 
-(1)picture_url：首先通过正则获取此html页面所有的图片url;
+(1)picture_url：首先通过正则获取此html页面所有的图片url(First, get all the image urls of this html page by regularity);
 
-(2)golbal_path:根据keyword生成一个名为keyword的文件夹;
+(2)golbal_path:根据keyword生成一个名为keyword的文件夹(Generate a folder named keyword based on the keyword);
 
-(3)for循环中的内容：
+(3)for循环中的内容：(Content in the for loop)
 
  循环遍历picture_url中的所有图片的url，然后通过requests.get来获取图片，并且通过try...except来处理两个常见的异常，然后将所有爬取的图片存入到以keyword命名的文件夹中，并且用当前时间（datetime.datetime.now())来命名所获得的图片，以此来防止图片重名的问题； 
  
+ Loop through the urls of all the images in picture_url, then get the images through requests.get, and handle two common exceptions by try...except, then save all the crawled images to the folder named after the keyword Medium, and use the current time (datetime.datetime.now ()) to name the obtained image, in order to prevent the problem of the name of the picture;
+ 
  4，if __name__ == '__main__':
  
- （1）input_word：获取输入的关键字； 
+ （1）input_word：获取输入的关键字(Get the entered keyword)； 
  
- （2）urls:通过观察百度图片（）中的url不同页码之间的区别:
+ （2）urls:通过观察百度图片中的url不同页码之间的区别(By observing the difference between the different page numbers of the url in Baidu pictures:):
  
  第一页：http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=cat&pn=0
  
@@ -56,5 +58,5 @@ Use python to crawl Baidu images
 
  通过此 urls = ["http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word="+input_word+"&pn={}".format(str(i)) for i in range(0,81,20)]来获取其前5页的所有图片。
  
- （3）for循环：以此遍历每页的url，并且调用getpic函数下载图片。
+ （3）for循环：依次遍历每页的url，并且调用getpic函数下载图片（Iterate through the url of each page in turn, and call the getpic function to download the image.）。
 
